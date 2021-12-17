@@ -24,7 +24,7 @@
     "@types/jest": "^27",
     "@types/mocha": "^9",
     "@types/node": "^16",
-    "@xylabs/eslint-config": "2.1.6",
+    "@xylabs/eslint-config": "2.1.7",
     "@xylabs/ts-scripts": "^1.0.23",
     "@xylabs/tsconfig": "^1.0.3",
     "bn.js": "^5.2.0",

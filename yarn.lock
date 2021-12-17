@@ -1538,7 +1538,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^5.3.0":
+"@typescript-eslint/eslint-plugin@^5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.7.0.tgz#12d54709f8ea1da99a01d8a992cd0474ad0f0aa9"
   integrity sha512-8RTGBpNn5a9M628wBPrCbJ+v3YTEOE2qeZb7TDkGKTDXSj36KGRg92SpFFaR/0S3rSXQxM0Og/kV9EyadsYSBg==
@@ -1564,7 +1564,7 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/parser@^5.3.0":
+"@typescript-eslint/parser@^5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.7.0.tgz#4dca6de463d86f02d252e681136a67888ea3b181"
   integrity sha512-m/gWCCcS4jXw6vkrPQ1BjZ1vomP01PArgzvauBqzsoZ3urLbsRChexB8/YV8z9HwE3qlJM35FxfKZ1nfP/4x8g==
@@ -1666,13 +1666,13 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.26.tgz#7acd1621783571b9a82eca1f041b4a0a983481d9"
   integrity sha512-vPV6Cq+NIWbH5pZu+V+2QHE9y1qfuTq49uNWw4f7FDEeZaDU2H2cx5jcUZOAKW7qTrUS4k6qZPbMy1x4N96nbA==
 
-"@xylabs/eslint-config@2.1.6", "@xylabs/eslint-config@^2.1.6":
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/@xylabs/eslint-config/-/eslint-config-2.1.6.tgz#b4388c918b5b2c82a8f3631100ef37bb96c2c17c"
-  integrity sha512-/fxQ3Psw6UXz47YJz8a6Hqut5GNB2b9xaPb6vo6/kjkZ1BdtqWtK8oqhSpmKs0ixbV7Ay8qVvfhcLfdJj+M7Jw==
+"@xylabs/eslint-config@2.1.7", "@xylabs/eslint-config@^2.1.6":
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/@xylabs/eslint-config/-/eslint-config-2.1.7.tgz#2639e7a295243bd2947c2c6477a12968de74ae89"
+  integrity sha512-x8+q8oC8PaBs0+0Gcf50tDpPhMwW8cRhLRigemBJwaZvMqVTC+4exk2G/351oWhx7B4iqpxuw0sB6NUEfwPnfw==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "^5.3.0"
-    "@typescript-eslint/parser" "^5.3.0"
+    "@typescript-eslint/eslint-plugin" "^5.7.0"
+    "@typescript-eslint/parser" "^5.7.0"
     eslint-config-prettier "^8.3.0"
     eslint-plugin-import "^2.25.2"
     eslint-plugin-json-es "^1.5.4"
@@ -1681,7 +1681,7 @@
     eslint-plugin-prettier "^4.0.0"
     eslint-plugin-simple-import-sort "^7.0.0"
     eslint-plugin-sort-keys-fix "^1.1.2"
-    remark-preset-lint-markdown-style-guide "^5.1.1"
+    remark-preset-lint-markdown-style-guide "^5.1.2"
 
 "@xylabs/ts-scripts@^1.0.23":
   version "1.0.24"
@@ -7084,7 +7084,7 @@ remark-preset-lint-markdown-style-guide@^2.1.3:
     remark-lint-table-pipes "^1.0.0"
     remark-lint-unordered-list-marker-style "^1.0.0"
 
-remark-preset-lint-markdown-style-guide@^5.1.1:
+remark-preset-lint-markdown-style-guide@^5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/remark-preset-lint-markdown-style-guide/-/remark-preset-lint-markdown-style-guide-5.1.2.tgz#877a837261df1f6c021557463aeda1e49506dd30"
   integrity sha512-MIAhnz0wDOq/MqLucSaAPquKGFE2I5SxqRjgWT+ZGK7TmqTxrro53e11/Pc19xPX4evmzI5CZdvaRnIoxP3ysQ==
