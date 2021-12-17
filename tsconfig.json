@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "types": ["jest"]
+  },
+  "exclude": ["dist/**/*"],
+  "extends": "@xylabs/tsconfig"
+}

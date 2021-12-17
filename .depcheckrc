@@ -1,0 +1,11 @@
+ignores: [
+  "@xylabs/ts-scripts",
+  "@xylabs/eslint-config",
+  "@types/mocha",
+  "@types/jest",
+  "@types/node",
+  "ts-jest",
+  "ts-node",
+  "eslint",
+  "typescript"
+]
