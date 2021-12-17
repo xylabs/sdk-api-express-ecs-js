@@ -23,7 +23,7 @@
     "@types/express": "^4.17.13",
     "@types/jest": "^27",
     "@types/mocha": "^9",
-    "@types/node": "^16",
+    "@types/node": "^17",
     "@xylabs/eslint-config": "2.1.6",
     "@xylabs/ts-scripts": "^1.0.23",
     "@xylabs/tsconfig": "^1.0.3",
