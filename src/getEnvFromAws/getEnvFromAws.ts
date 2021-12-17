@@ -21,9 +21,11 @@ export const getEnvFromAws = async (secretId: string) => {
       const secretObject = JSON.parse(awsResult?.SecretString) as Record<string, string>
       console.log(`ENV read from AWS [${Object.entries(secretObject).length}]`)
       envCache.set(secretId, secretObject)
+      return secretObject
     } else {
       throw Error('Missing SecretString')
     }
+  } else {
+    return cacheResult
   }
-  return envCache.get<Record<string, string>>(secretId)
 }
