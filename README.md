@@ -54,17 +54,17 @@ See the [LICENSE](LICENSE) file for license details
 [Made with 🔥 and ❄️ by XY Labs](https://xylabs.com)
 
 [logo]: https://cdn.xy.company/img/brand/XYPersistentCompany_Logo_Icon_Colored.svg
-[main-build]: https://github.com/xylabs/sdk-js/actions/workflows/build-main.yml/badge.svg
-[main-build-link]: https://github.com/xylabs/sdk-js/actions/workflows/build-main.yml
-[beta-build]: https://github.com/xylabs/sdk-js/actions/workflows/build-beta.yml/badge.svg
-[beta-build-link]: https://github.com/xylabs/sdk-js/actions/workflows/build-beta.yml
-[npm-badge]: https://img.shields.io/npm/v/@xylabs/sdk-js.svg
-[npm-link]: https://www.npmjs.com/package/@xylabs/sdk-js
-[bch-badge]: https://bettercodehub.com/edge/badge/xylabs/sdk-js?branch=main
-[bch-link]: https://bettercodehub.com/results/xylabs/sdk-js
-[codacy-badge]: https://app.codacy.com/project/badge/Grade/c8e15e14f37741c18cfb47ac7245c698
-[codacy-link]: https://www.codacy.com/gh/xylabs/sdk-js/dashboard?utm_source=github.com&utm_medium=referral&utm_content=xylabs/sdk-js&utm_campaign=Badge_Grade
-[codeclimate-badge]: https://api.codeclimate.com/v1/badges/c5eb068f806f0b047ea7/maintainability
-[codeclimate-link]: https://codeclimate.com/github/xylabs/sdk-js/maintainability
-[snyk-badge]: https://snyk.io/test/github/xylabs/sdk-js/badge.svg?targetFile=package.json
-[snyk-link]: https://snyk.io/test/github/xylabs/sdk-js?targetFile=package.json
+[main-build]: https://github.com/xylabs/sdk-api-express-ecs-js/actions/workflows/build-main.yml/badge.svg
+[main-build-link]: https://github.com/xylabs/sdk-api-express-ecs-js/actions/workflows/build-main.yml
+[beta-build]: https://github.com/xylabs/sdk-api-express-ecs-js/actions/workflows/build-beta.yml/badge.svg
+[beta-build-link]: https://github.com/xylabs/sdk-api-express-ecs-js/actions/workflows/build-beta.yml
+[npm-badge]: https://img.shields.io/npm/v/@xylabs/sdk-api-express-ecs.svg
+[npm-link]: https://www.npmjs.com/package/@xylabs/sdk-api-express-ecs
+[bch-badge]: https://bettercodehub.com/edge/badge/xylabs/sdk-api-express-ecs-js?branch=main
+[bch-link]: https://bettercodehub.com/results/xylabs/sdk-api-express-ecs-js
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/84270ff9f2aa4a669269191b715aa8d7
+[codacy-link]: https://www.codacy.com/gh/xylabs/sdk-api-express-ecs-js/dashboard?utm_source=github.com&utm_medium=referral&utm_content=xylabs/sdk-api-express-ecs-js&utm_campaign=Badge_Grade
+[codeclimate-badge]: https://api.codeclimate.com/v1/badges/1c8255608f551b2119d6/maintainability
+[codeclimate-link]: https://codeclimate.com/github/xylabs/sdk-api-express-ecs-js/maintainability
+[snyk-badge]: https://snyk.io/test/github/xylabs/sdk-api-express-ecs-js/badge.svg?targetFile=package.json
+[snyk-link]: https://snyk.io/test/github/xylabs/sdk-api-express-ecs-js?targetFile=package.json
