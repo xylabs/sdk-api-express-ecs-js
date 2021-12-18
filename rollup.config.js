@@ -54,21 +54,22 @@ function emitModulePackageFile() {
   }
 }
 
-const es5BuildPlugins = [
+const pluginsBase = [
   json(),
   strip({
     functions: ['debugAssert.*'],
   }),
+]
+
+const es5BuildPlugins = [
+  ...pluginsBase,
   typescriptPlugin({
     typescript,
   }),
 ]
 
 const es2017BuildPlugins = [
-  json(),
-  strip({
-    functions: ['debugAssert.*'],
-  }),
+  ...pluginsBase,
   typescriptPlugin({
     tsconfigOverride: {
       compilerOptions: {
@@ -79,20 +80,23 @@ const es2017BuildPlugins = [
   }),
 ]
 
+const extrnalDeps = (id) => deps.some((dep) => id === dep || id.startsWith(`${dep}/`))
+
+const browserBuildBase = {
+  external: extrnalDeps,
+  input: {
+    index: 'index.ts',
+  },
+}
+
 const browserBuilds = [
   {
-    external: (id) => deps.some((dep) => id === dep || id.startsWith(`${dep}/`)),
-    input: {
-      index: 'index.ts',
-    },
+    ...browserBuildBase,
     output: [{ dir: 'dist/esm5', format: 'es', sourcemap: true }],
     plugins: [...es5BuildPlugins, replace(generateBuildTargetReplaceConfig('esm', 5))],
   },
   {
-    external: (id) => deps.some((dep) => id === dep || id.startsWith(`${dep}/`)),
-    input: {
-      index: 'index.ts',
-    },
+    ...browserBuildBase,
     output: {
       dir: 'dist/esm2017',
       format: 'es',
@@ -102,20 +106,21 @@ const browserBuilds = [
   },
 ]
 
+const nodeBuildBase = {
+  external: extrnalDeps,
+  input: {
+    index: 'index.node.ts',
+  },
+}
+
 const nodeBuilds = [
   {
-    external: (id) => deps.some((dep) => id === dep || id.startsWith(`${dep}/`)),
-    input: {
-      index: 'index.node.ts',
-    },
+    ...nodeBuildBase,
     output: [{ dir: 'dist/node', format: 'cjs', sourcemap: true }],
     plugins: [...es5BuildPlugins, replace(generateBuildTargetReplaceConfig('cjs', 5))],
   },
   {
-    external: (id) => deps.some((dep) => id === dep || id.startsWith(`${dep}/`)),
-    input: {
-      index: 'index.node.ts',
-    },
+    ...nodeBuildBase,
     output: [{ dir: 'dist/node-esm', format: 'es', sourcemap: true }],
     plugins: [...es2017BuildPlugins, replace(generateBuildTargetReplaceConfig('esm', 2017)), emitModulePackageFile()],
   },

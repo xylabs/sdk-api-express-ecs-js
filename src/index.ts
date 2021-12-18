@@ -1,5 +1,6 @@
 export * from './asyncHandler'
+export * from './compactObject'
 export * from './errorToJsonHandler'
 export * from './ExpressError'
 export * from './getEnvFromAws'
-export * from './parsers'
+export * from './tryParse'
