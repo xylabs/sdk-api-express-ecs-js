@@ -81,7 +81,7 @@
   },
   "scripts": {
     "compile": "rm -r -f dist && yarn compile-rollup && yarn compile-tsc",
-    "compile-rollup": "rollup -c rollup.config.js",
+    "compile-rollup": "rollup -c",
     "compile-tsc": "tsc -p tsconfig.json",
     "lint-pkg": "npmPkgJsonLint .",
     "test": "jest"
