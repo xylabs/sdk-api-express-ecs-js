@@ -1,8 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "types": ["jest"]
+    "outDir": "./dist",
+    "rootDir": ".",
+    "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["dist/**/*"],
-  "extends": "@xylabs/tsconfig"
+  "exclude": [
+    "src/**/*.spec.ts"
+  ],
+  "extends": "@xylabs/tsconfig",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
