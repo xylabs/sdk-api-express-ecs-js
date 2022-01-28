@@ -1,33 +1,34 @@
 export class Counters {
   public static counters: Record<string, number> = {}
-  public static inc(name: string, count = 1) {
+
+  private static catchError = (name: string, func: (name: string) => void) => {
     try {
-      this.counters[name] = (this.counters[name] ?? 0) + count
+      func(name)
     } catch (ex) {
       this.counters[name] = 0
       this.inc('CountersErrors')
     }
   }
+
+  public static inc(name: string, count = 1) {
+    this.catchError(name, (name: string) => {
+      this.counters[name] = (this.counters[name] ?? 0) + count
+    })
+  }
   public static min(name: string, count: number) {
-    try {
+    this.catchError(name, (name: string) => {
       const currentValue = this.counters[name]
       if (currentValue === undefined || count < currentValue) {
         this.counters[name] = count
       }
-    } catch (ex) {
-      this.counters[name] = 0
-      this.inc('CountersErrors')
-    }
+    })
   }
   public static max(name: string, count: number) {
-    try {
+    this.catchError(name, (name: string) => {
       const currentValue = this.counters[name]
       if (currentValue === undefined || count > currentValue) {
         this.counters[name] = count
       }
-    } catch (ex) {
-      this.counters[name] = 0
-      this.inc('CountersErrors')
-    }
+    })
   }
 }
