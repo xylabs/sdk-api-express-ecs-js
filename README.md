@@ -8,7 +8,6 @@
 [![bch-badge][]][bch-link]
 [![codacy-badge][]][codacy-link]
 [![codeclimate-badge][]][codeclimate-link]
-[![snyk-badge][]][snyk-link]
 
 ## Table of Contents
 
@@ -66,5 +65,3 @@ See the [LICENSE](LICENSE) file for license details
 [codacy-link]: https://www.codacy.com/gh/xylabs/sdk-api-express-ecs-js/dashboard?utm_source=github.com&utm_medium=referral&utm_content=xylabs/sdk-api-express-ecs-js&utm_campaign=Badge_Grade
 [codeclimate-badge]: https://api.codeclimate.com/v1/badges/1c8255608f551b2119d6/maintainability
 [codeclimate-link]: https://codeclimate.com/github/xylabs/sdk-api-express-ecs-js/maintainability
-[snyk-badge]: https://snyk.io/test/github/xylabs/sdk-api-express-ecs-js/badge.svg?targetFile=package.json
-[snyk-link]: https://snyk.io/test/github/xylabs/sdk-api-express-ecs-js?targetFile=package.json
