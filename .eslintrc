@@ -1,12 +1,9 @@
 {
   "root": true,
-  "ignorePatterns": ["package.json", "src/**/*.spec.*", "rollup.config.js"],
+  "ignorePatterns": ["package.json"],
   "extends": [
     "@xylabs"
   ],
-  "parserOptions": {
-    "project": "tsconfig.json"
-  },
   "rules": {
     "import/no-internal-modules": [
       "warn", {
