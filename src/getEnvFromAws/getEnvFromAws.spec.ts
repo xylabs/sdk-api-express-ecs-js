@@ -7,7 +7,7 @@ test('all', async () => {
   try {
     return await getEnvFromAws('does-not-exist')
   } catch (ex) {
-    // eslint-disable-next-line import/no-deprecated
+    // eslint-disable-next-line import/no-deprecated, deprecation/deprecation
     const error = ex as SdkError
     expect(error.name).toEqual('ResourceNotFoundException')
   }
