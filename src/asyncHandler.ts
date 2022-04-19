@@ -1,13 +1,9 @@
 import { NextFunction, Request, RequestHandler, Response } from 'express'
 import { ParamsDictionary, Query } from 'express-serve-static-core'
 
-export function asyncHandler<
-  P = NoReqParams,
-  ResBody = NoResBody,
-  ReqBody = NoReqBody,
-  ReqQuery = NoReqQuery,
-  Locals extends NoLocals = NoLocals
->(fn: RequestHandler<P, ResBody, ReqBody, ReqQuery, Locals>) {
+export function asyncHandler<P = NoReqParams, ResBody = NoResBody, ReqBody = NoReqBody, ReqQuery = NoReqQuery, Locals extends NoLocals = NoLocals>(
+  fn: RequestHandler<P, ResBody, ReqBody, ReqQuery, Locals>
+) {
   return (req: Request<P, ResBody, ReqBody, ReqQuery, Locals>, res: Response<ResBody, Locals>, next: NextFunction) => {
     return Promise.resolve(fn(req, res, next)).catch(next)
   }
