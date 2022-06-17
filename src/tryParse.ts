@@ -1,4 +1,4 @@
-type ParseFunc<T = number> = (value: string) => T
+export type ParseFunc<T = number> = (value: string) => T
 
 export const tryParse = <T = number>(func: ParseFunc<T>, value?: string) => {
   try {
