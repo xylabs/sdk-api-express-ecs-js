@@ -1,7 +1,7 @@
 const generateJestConfig = ({ esModules }) => {
   const esModuleslist = Array.isArray(esModules) ? esModules.join('|') : esModules
   return {
-    coveragePathIgnorePatterns: ['<rootDir>/src/Profiler.ts'],
+    coveragePathIgnorePatterns: ['<rootDir>/src/Model'],
     coverageThreshold: {
       global: {
         branches: 50,
