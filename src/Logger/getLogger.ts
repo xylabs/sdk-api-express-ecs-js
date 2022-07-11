@@ -11,12 +11,11 @@ const { Console } = transports
 
 const format = process.env.NODE_ENV === 'development' ? logFormatLocalDev : logFormatStructured
 const transport = new Console()
-
-// TODO: Make dynamic and pass in for re-use
-const defaultAutomationWitnessMeta: LoggerMeta = { service: 'api-automation-witness' }
 const handleRejections = true
 
-export const getLogger = (minimumVerbosity: LoggerVerbosity = 'info', defaultMeta: LoggerMeta = defaultAutomationWitnessMeta): Logger => {
+// TODO: Make dynamic and pass in for re-use
+
+export const getLogger = (defaultMeta: LoggerMeta = {}, minimumVerbosity: LoggerVerbosity = 'info'): Logger => {
   const level = toWinstonVerbosity(minimumVerbosity)
   const logger = createLogger({
     defaultMeta,

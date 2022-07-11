@@ -23,7 +23,7 @@ describe('getLogger', () => {
       consoleLogMock.mockRestore()
     })
     it.each(loggerKeys)('logs log with %s verbosity', (verbosity: LoggerKey) => {
-      const logger = getLogger('all')
+      const logger = getLogger({}, 'all')
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const logMethod = (logger as any)[verbosity]
       expect(logMethod).toBeFunction()
