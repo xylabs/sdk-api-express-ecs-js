@@ -1,3 +1,27 @@
 {
-  "extends": "@xylabs/tsconfig"
+  "compilerOptions": {
+    "module": "esnext",
+    "outDir": "dist",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "jest",
+      "node",
+      "@types/jest",
+      "jest-sorted",
+      "jest-extended"
+    ]
+  },
+  "exclude": [
+    "dist/**/*"
+  ],
+  "extends": "@xylabs/tsconfig",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    },
+    "files": true,
+    "transpileOnly": true
+  }
 }
