@@ -1,6 +1,6 @@
 import { Application, NextFunction, Request, Response } from 'express'
 
-import { Counters } from '../../Counters'
+import { Counters } from '../../Performance'
 
 export const useRequestCounters = (app: Application): void => {
   // Configure Global counters
