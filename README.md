@@ -38,7 +38,8 @@ yarn add @xylabs/sdk-api-express-ecs
 
 ## Scripts
 
-See [ts-scripts](https://github.com/xylabs/ts-scripts/blob/main/README.md) for list of shared scripts.
+See [ts-scripts](https://github.com/xylabs/ts-scripts/blob/main/README.md) for
+list of shared scripts.
 
 ## Maintainers
 

@@ -1,0 +1,16 @@
+ignores: [
+  "@types/node",
+  "@types/jest",
+  "@xylabs/rollup-config",
+  "@xylabs/tsconfig",
+  "@xylabs/ts-scripts",
+  "babel-jest",
+  "eslint",
+  "jest-extended",
+  "jest-sorted",
+  "prettier",
+  "ts-jest",
+  "ts-node",
+  "tslib",
+  "typedoc",
+]
