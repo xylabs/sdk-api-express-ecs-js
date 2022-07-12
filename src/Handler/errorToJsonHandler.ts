@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 
-import { ExpressError } from './ExpressError'
+import { ExpressError } from '../Model'
 
 export const errorToJsonHandler = (error: ExpressError, req: Request, res: Response, next: NextFunction) => {
   if (error) {

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 
-import { ExpressError } from '../../ExpressError'
+import { ExpressError } from '../../Model'
 import { getResponseMetadata } from './getResponseMetadata'
 import { ApiError, ApiErrorResponse } from './jsonApi'
 
