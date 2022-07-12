@@ -2,9 +2,9 @@ import { createLogger, transports } from 'winston'
 
 import { logFormatLocalDev, logFormatStructured } from './LogFormats'
 import { Logger } from './Logger'
-import { LoggerMeta } from './LoggerMeta'
 import { LoggerVerbosity } from './LoggerVerbosity'
 import { toWinstonVerbosity } from './toWinstonVerbosity'
+import { WinstonVerbosity } from './WinstonVerbosity'
 import { WrappedWinstonLogger } from './WrappedWinstonLogger'
 
 const { Console } = transports
@@ -13,17 +13,29 @@ const format = process.env.NODE_ENV === 'development' ? logFormatLocalDev : logF
 const transport = new Console()
 const handleRejections = true
 
-// TODO: Make dynamic and pass in for re-use
+const loggers: Record<WinstonVerbosity, Logger | undefined> = {
+  debug: undefined,
+  error: undefined,
+  http: undefined,
+  info: undefined,
+  silly: undefined,
+  verbose: undefined,
+  warn: undefined,
+}
 
-export const getLogger = (defaultMeta: LoggerMeta = {}, minimumVerbosity: LoggerVerbosity = 'info'): Logger => {
-  const level = toWinstonVerbosity(minimumVerbosity)
-  const logger = createLogger({
-    defaultMeta,
-    format,
-    handleRejections,
-    level,
-    rejectionHandlers: [transport],
-    transports: [transport],
-  })
-  return new WrappedWinstonLogger(logger)
+export const getLogger = (minVerbosity: LoggerVerbosity = 'info'): Logger => {
+  const level = toWinstonVerbosity(minVerbosity)
+  const existing = loggers[level]
+  if (existing) return existing
+  const logger = new WrappedWinstonLogger(
+    createLogger({
+      format,
+      handleRejections,
+      level,
+      rejectionHandlers: [transport],
+      transports: [transport],
+    })
+  )
+  loggers[level] = logger
+  return logger
 }
