@@ -2,6 +2,8 @@
 
 # @xylabs/sdk-api-express-ecs-js
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e79b131162ce4ca38bd4859d5d68ac26)](https://app.codacy.com/gh/xylabs/sdk-api-express-ecs-js?utm_source=github.com&utm_medium=referral&utm_content=xylabs/sdk-api-express-ecs-js&utm_campaign=Badge_Grade_Settings)
+
 [![main-build][]][main-build-link]
 [![beta-build][]][beta-build-link]
 [![npm-badge][]][npm-link]
