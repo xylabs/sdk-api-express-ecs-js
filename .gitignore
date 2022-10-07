@@ -1,10 +1,11 @@
-node_modules
-dist
-bin
 .env
 .DS_Store
 *.log
 .rollup.cache
+bin
+coverage
+dist
+node_modules
 
 .pnp.*
 .yarn/*
@@ -13,5 +14,3 @@ bin
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-
-coverage
