@@ -1,1 +1,1 @@
-export * from './WinstonRollbarTransport'
+export * from './RollbarTransport'

@@ -1,17 +1,17 @@
 import { mock, MockProxy } from 'jest-mock-extended'
 import Rollbar from 'rollbar'
 
-import { WinstonRollbarTransport } from './WinstonRollbarTransport'
+import { RollbarTransport } from './RollbarTransport'
 
 const accessToken = process.env.ROLLBAR_ACCESS_TOKEN
 const unitTestSentinelLoggingString = 'Unit Test Logging'
 
-describe('WinstonRollbarTransport', () => {
+describe('RollbarTransport', () => {
   let rollbar: MockProxy<Rollbar> | Rollbar
-  let sut: WinstonRollbarTransport
+  let sut: RollbarTransport
   beforeEach(() => {
     rollbar = accessToken ? new Rollbar({ accessToken, environment: 'development' }) : mock<Rollbar>()
-    sut = new WinstonRollbarTransport({}, rollbar)
+    sut = new RollbarTransport({}, rollbar)
   })
   it('logs', () => {
     expect(sut).toBeObject()
