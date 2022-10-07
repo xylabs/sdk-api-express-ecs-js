@@ -34,7 +34,7 @@ export const getLogger = (minVerbosity: LoggerVerbosity = 'info'): Logger => {
       level,
       rejectionHandlers: [transport],
       transports: [transport],
-    })
+    }),
   )
   loggers[level] = logger
   return logger
