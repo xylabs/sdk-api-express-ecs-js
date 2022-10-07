@@ -1,4 +1,5 @@
-import { createLogger, transports } from 'winston'
+import { createLogger, transports as winstonTransports } from 'winston'
+import TransportStream from 'winston-transport'
 
 import { logFormatLocalDev, logFormatStructured } from './LogFormats'
 import { Logger } from './Logger'
@@ -7,11 +8,13 @@ import { toWinstonVerbosity } from './toWinstonVerbosity'
 import { WinstonVerbosity } from './WinstonVerbosity'
 import { WrappedWinstonLogger } from './WrappedWinstonLogger'
 
-const { Console } = transports
-
-const format = process.env.NODE_ENV === 'development' ? logFormatLocalDev : logFormatStructured
-const transport = new Console()
 const handleRejections = true
+const exitOnError = false
+
+const { Console } = winstonTransports
+const format = process.env.NODE_ENV === 'development' ? logFormatLocalDev : logFormatStructured
+const consoleTransport = new Console()
+const transports: TransportStream[] = [consoleTransport]
 
 const loggers: Record<WinstonVerbosity, Logger | undefined> = {
   debug: undefined,
@@ -29,11 +32,12 @@ export const getLogger = (minVerbosity: LoggerVerbosity = 'info'): Logger => {
   if (existing) return existing
   const logger = new WrappedWinstonLogger(
     createLogger({
+      exitOnError,
       format,
       handleRejections,
       level,
-      rejectionHandlers: [transport],
-      transports: [transport],
+      rejectionHandlers: transports,
+      transports,
     }),
   )
   loggers[level] = logger
