@@ -3,17 +3,20 @@ import Rollbar from 'rollbar'
 
 import { WinstonRollbarTransport } from './WinstonRollbarTransport'
 
+const accessToken = process.env.ROLLBAR_ACCESS_TOKEN
+const unitTestSentinelLoggingString = 'foo'
+
 describe('WinstonRollbarTransport', () => {
-  let rollbar: MockProxy<Rollbar>
+  let rollbar: MockProxy<Rollbar> | Rollbar
   let sut: WinstonRollbarTransport
   beforeEach(() => {
-    rollbar = mock<Rollbar>()
+    rollbar = accessToken ? new Rollbar({ accessToken, environment: 'development' }) : mock<Rollbar>()
     sut = new WinstonRollbarTransport({}, rollbar)
   })
   it('logs', () => {
     expect(sut).toBeObject()
     const nextMock = jest.fn()
-    sut.log('foo', nextMock)
+    sut.log(unitTestSentinelLoggingString, nextMock)
     expect(nextMock).toHaveBeenCalledOnce()
   })
 })
