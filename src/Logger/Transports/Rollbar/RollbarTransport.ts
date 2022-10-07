@@ -1,7 +1,7 @@
 import Rollbar from 'rollbar'
 import Transport, { TransportStreamOptions } from 'winston-transport'
 
-export class WinstonRollbarTransport extends Transport {
+export class RollbarTransport extends Transport {
   constructor(opts: TransportStreamOptions, protected readonly rollbar?: Rollbar) {
     super(opts)
   }
