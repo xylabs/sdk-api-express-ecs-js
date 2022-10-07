@@ -2529,6 +2529,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xylabs/assert@npm:^2.6.9":
+  version: 2.6.9
+  resolution: "@xylabs/assert@npm:2.6.9"
+  checksum: 7e99eff0aebab90d51b200750e19146630cf1290cd65bf3565d35d74738b50abc1c427f4dacd5bdff2281cf35202ed1c507854e773c69629fb1b816b5aea7857
+  languageName: node
+  linkType: hard
+
 "@xylabs/eslint-config@npm:2.7.23, @xylabs/eslint-config@npm:^2.7.23":
   version: 2.7.23
   resolution: "@xylabs/eslint-config@npm:2.7.23"
@@ -2586,6 +2593,7 @@ __metadata:
     "@types/express-mung": ^0.5.2
     "@types/jest": ^29.1.2
     "@types/node": ^18.8.3
+    "@xylabs/assert": ^2.6.9
     "@xylabs/eslint-config": 2.7.23
     "@xylabs/rollup-config": ^1.1.17
     "@xylabs/ts-scripts": ^2.7.23
