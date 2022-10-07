@@ -21,7 +21,6 @@
       "args": [
         "--forceExit",
         "--runInBand",
-        "src/Logger/Transports/Rollbar/WinstonRollbarTransport.spec.ts"
       ],
       "pauseForSourceMap": true,
       "console": "integratedTerminal",
