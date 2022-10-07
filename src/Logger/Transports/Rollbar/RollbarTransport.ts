@@ -3,7 +3,7 @@ import Transport, { TransportStreamOptions } from 'winston-transport'
 
 export class RollbarTransport extends Transport {
   constructor(opts: TransportStreamOptions, protected readonly rollbar?: Rollbar) {
-    super(opts)
+    super({ ...opts, level: 'error' })
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
