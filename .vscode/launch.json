@@ -6,27 +6,22 @@
   "configurations": [
     {
       "name": "Debug Jest Tests",
-      "request": "launch",
       "type": "node",
+      "request": "launch",
       "runtimeArgs": [
         "--inspect-brk",
         "--max-old-space-size=8192",
       ],
       "osx": {
-        "name": "Debug Jest Tests",
-        "request": "launch",
-        "type": "node",
         "program": "${workspaceRoot}/node_modules/.bin/jest",
       },
       "windows": {
-        "name": "Debug Jest Tests",
-        "request": "launch",
-        "type": "node",
         "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       },
       "args": [
         "--forceExit",
         "--runInBand",
+        "src/Logger/Transports/Rollbar/WinstonRollbarTransport.spec.ts"
       ],
       "pauseForSourceMap": true,
       "console": "integratedTerminal",
