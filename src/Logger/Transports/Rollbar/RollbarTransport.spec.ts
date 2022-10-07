@@ -6,7 +6,7 @@ import { RollbarTransport } from './RollbarTransport'
 const accessToken = process.env.ROLLBAR_ACCESS_TOKEN
 const unitTestSentinelLoggingString = 'Unit Test Logging'
 
-describe('RollbarTransport', () => {
+describe.skip('RollbarTransport', () => {
   let rollbar: MockProxy<Rollbar> | Rollbar
   let sut: RollbarTransport
   beforeEach(() => {
