@@ -91,6 +91,7 @@
     "build": "yarn build:esm && yarn build:cjs && yarn gen:docs",
     "build:cjs": "tsc -p tsconfig.build.cjs.json",
     "build:esm": "tsc -p tsconfig.build.esm.json",
+    "coverage": "jest --coverage",
     "gen:docs": "typedoc src/index.ts --json dist/docs.json",
     "lint-pkg": "npmPkgJsonLint .",
     "test": "jest"
