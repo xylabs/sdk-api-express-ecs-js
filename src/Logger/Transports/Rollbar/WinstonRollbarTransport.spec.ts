@@ -4,7 +4,7 @@ import Rollbar from 'rollbar'
 import { WinstonRollbarTransport } from './WinstonRollbarTransport'
 
 const accessToken = process.env.ROLLBAR_ACCESS_TOKEN
-const unitTestSentinelLoggingString = 'foo'
+const unitTestSentinelLoggingString = 'Log from Unit Tests'
 
 describe('WinstonRollbarTransport', () => {
   let rollbar: MockProxy<Rollbar> | Rollbar
