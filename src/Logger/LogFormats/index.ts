@@ -1,2 +1,2 @@
-export * from './logFormatLocalDev'
-export * from './logFormatStructured'
+export * from './LocalDev'
+export * from './Structured'
