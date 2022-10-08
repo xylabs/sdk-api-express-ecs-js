@@ -1,27 +1,18 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
       "name": "Debug Jest Tests",
       "type": "node",
       "request": "launch",
-      "runtimeArgs": [
-        "--inspect-brk",
-        "--max-old-space-size=8192"
-      ],
+      "runtimeArgs": ["--inspect-brk", "--max-old-space-size=8192"],
       "osx": {
-        "program": "${workspaceRoot}/node_modules/.bin/jest",
+        "program": "${workspaceRoot}/node_modules/.bin/jest"
       },
       "windows": {
-        "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "program": "${workspaceRoot}/node_modules/jest/bin/jest.js"
       },
-      "args": [
-        "--forceExit",
-        "--runInBand"
-      ],
+      "args": ["--forceExit", "--runInBand"],
       "pauseForSourceMap": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -29,7 +20,7 @@
       "env": {
         "NODE_ENV": "test"
       },
-      "envFile": "${workspaceRoot}/.env",
+      "envFile": "${workspaceRoot}/.env"
     }
   ]
 }
