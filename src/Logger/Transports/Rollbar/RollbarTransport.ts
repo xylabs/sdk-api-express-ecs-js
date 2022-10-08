@@ -9,9 +9,9 @@ export class RollbarTransport extends Transport {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  log(info: any, next: () => void) {
-    this.rollbar?.error(info)
-    this.emit('logged', info)
+  log(info: { message?: string }, next: () => void) {
+    this.rollbar?.error(info?.message)
+    this.emit('logged', info?.message)
     next()
   }
 }
