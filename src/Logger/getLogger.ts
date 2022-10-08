@@ -16,7 +16,7 @@ const { Console } = winstonTransports
 const format = process.env.NODE_ENV === 'development' ? logFormatLocalDev : logFormatStructured
 const consoleTransport = new Console()
 const transports: TransportStream[] = [consoleTransport]
-if (canGetDefaultRollbarTransport()) {
+if (canGetDefaultRollbarTransport(process.env)) {
   try {
     const rollbarTransport = getDefaultRollbarTransport()
     transports.push(rollbarTransport)
