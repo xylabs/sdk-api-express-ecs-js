@@ -9,19 +9,20 @@ import { canGetDefaultRollbarTransport, getDefaultRollbarTransport } from './Tra
 import { WinstonVerbosity } from './WinstonVerbosity'
 import { WrappedWinstonLogger } from './WrappedWinstonLogger'
 
-const handleRejections = true
 const exitOnError = false
+const handleRejections = true
 
 const { Console } = winstonTransports
-const format = process.env.NODE_ENV === 'development' ? logFormatLocalDev : logFormatStructured
 const consoleTransport = new Console()
+const format = process.env.NODE_ENV === 'development' ? logFormatLocalDev : logFormatStructured
 const transports: TransportStream[] = [consoleTransport]
 if (canGetDefaultRollbarTransport(process.env)) {
   try {
-    const rollbarTransport = getDefaultRollbarTransport()
+    const rollbarTransport = getDefaultRollbarTransport(process.env)
     transports.push(rollbarTransport)
-  } catch (error) {
-    // TODO: How to log errors with no logger?
+  } catch (_err) {
+    // NOTE: No error here, just gracefully adding logger if ENV VARs
+    // were preset
   }
 }
 
