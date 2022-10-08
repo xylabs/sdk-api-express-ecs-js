@@ -4,9 +4,9 @@ import Rollbar from 'rollbar'
 import { RollbarTransport } from './RollbarTransport'
 
 const accessToken = process.env.ROLLBAR_ACCESS_TOKEN
-const unitTestSentinelLoggingString = 'Unit Test Logging'
+const unitTestSentinelLoggingString = 'error log from unit test'
 
-describe.skip('RollbarTransport', () => {
+describe('RollbarTransport', () => {
   let rollbar: MockProxy<Rollbar> | Rollbar
   let sut: RollbarTransport
   beforeEach(() => {
@@ -16,7 +16,7 @@ describe.skip('RollbarTransport', () => {
   it('logs', () => {
     expect(sut).toBeObject()
     const nextMock = jest.fn()
-    sut.log(unitTestSentinelLoggingString, nextMock)
+    sut.log({ message: unitTestSentinelLoggingString }, nextMock)
     expect(nextMock).toHaveBeenCalledOnce()
   })
 })
