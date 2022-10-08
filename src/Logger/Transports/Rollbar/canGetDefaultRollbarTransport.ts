@@ -1,4 +1,3 @@
-export const canGetDefaultRollbarTransport = (): boolean => {
-  const accessToken = process.env.ROLLBAR_ACCESS_TOKEN
-  return accessToken ? true : false
+export const canGetDefaultRollbarTransport = (env: { [key: string]: string | undefined }): boolean => {
+  return env.ROLLBAR_ACCESS_TOKEN ? true : false
 }
