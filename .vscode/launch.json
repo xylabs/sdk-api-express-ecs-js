@@ -10,7 +10,7 @@
       "request": "launch",
       "runtimeArgs": [
         "--inspect-brk",
-        "--max-old-space-size=8192",
+        "--max-old-space-size=8192"
       ],
       "osx": {
         "program": "${workspaceRoot}/node_modules/.bin/jest",
@@ -20,7 +20,7 @@
       },
       "args": [
         "--forceExit",
-        "--runInBand",
+        "--runInBand"
       ],
       "pauseForSourceMap": true,
       "console": "integratedTerminal",
