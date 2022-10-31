@@ -11784,8 +11784,8 @@ __metadata:
   linkType: hard
 
 "typedoc@npm:^0.23.15":
-  version: 0.23.15
-  resolution: "typedoc@npm:0.23.15"
+  version: 0.23.19
+  resolution: "typedoc@npm:0.23.19"
   dependencies:
     lunr: ^2.3.9
     marked: ^4.0.19
@@ -11795,7 +11795,7 @@ __metadata:
     typescript: 4.6.x || 4.7.x || 4.8.x
   bin:
     typedoc: bin/typedoc
-  checksum: 2313bcda09755332e15e40fb2e72ac8d72447abfcd60f7c555d3a232ad1fe3596afd87ddcfbdf17eb081fc65f1cbf43b02e05adf38e6ade55f64d475da4271d7
+  checksum: 4659dce4e8550a3f0d4739b6c9c583d8f2afba9c37e2fe38325e3cff781a50daf57afe10cbcc27f11b56da0623d502628e0713c55f30eae619c4427d18ce1064
   languageName: node
   linkType: hard
 
