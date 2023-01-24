@@ -6,6 +6,8 @@ bin
 coverage
 dist
 node_modules
+.tsconfig.*
+.eslintcache
 
 .pnp.*
 .yarn/*
