@@ -1,27 +1,20 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "outDir": "dist",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "declarationMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "noImplicitOverride": false,
+    "typeRoots": ["./node_modules/@types", "**/src/types"],
     "types": [
-      "jest",
-      "node",
-      "@types/jest",
+      "jest-extended",
       "jest-sorted",
-      "jest-extended"
+      "jest",
+      "node"
     ]
   },
-  "exclude": [
-    "dist/**/*"
-  ],
-  "extends": "@xylabs/tsconfig",
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    },
-    "files": true,
-    "transpileOnly": true
-  }
+  "exclude": ["**/dist", "**/node_modules"],
+  "extends": "@xylabs/tsconfig"
 }
