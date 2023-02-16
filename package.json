@@ -17,7 +17,7 @@
     "@types/jest": "^29.2.6",
     "@types/node": "^18.11.18",
     "@xylabs/assert": "^2.6.16",
-    "@xylabs/eslint-config": "2.12.25",
+    "@xylabs/eslint-config": "2.14.15",
     "@xylabs/ts-scripts-yarn3": "^2.12.25",
     "@xylabs/tsconfig": "^2.12.25",
     "body-parser": "^1.20.1",
