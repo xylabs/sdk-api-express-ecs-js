@@ -46,5 +46,9 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
+  },
+  "cSpell.words": [
+    "publint",
+    "tsup"
+  ]
 }
