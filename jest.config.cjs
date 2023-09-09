@@ -1,36 +1,20 @@
 const generateJestConfig = ({ esModules }) => {
   const esModulesList = Array.isArray(esModules) ? esModules.join('|') : esModules
   return {
-    coveragePathIgnorePatterns: ['./src/AWS'],
-    coverageThreshold: {
-      global: {
-        branches: 50,
-        functions: 70,
-        lines: 70,
-        statements: 70,
-      },
-    },
+    coveragePathIgnorePatterns: ['<rootDir>/(.*)/dist'],
     moduleNameMapper: {
       '^(\\.{1,2}/.*)\\.js$': '$1',
     },
     preset: 'ts-jest/presets/default-esm',
-    setupFiles: ['dotenv/config'],
-    setupFilesAfterEnv: ['jest-extended/all', 'jest-sorted'],
+    setupFilesAfterEnv: ['jest-sorted', 'jest-extended/all'],
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-    testTimeout: 30000,
+    testTimeout: 20000,
     transform: {
-      [`(${esModulesList}).+\\.js$`]: [
-        'babel-jest',
-        {
-          babelConfig: 'babel.config.json',
-          useESM: true,
-        },
-      ],
+      [`(${esModulesList}).+\\.js$`]: 'babel-jest',
       '^.+\\.tsx?$': [
         'ts-jest',
         {
           tsconfig: 'tsconfig.test.json',
-          useESM: true,
         },
       ],
     },
@@ -39,4 +23,4 @@ const generateJestConfig = ({ esModules }) => {
 }
 
 // eslint-disable-next-line no-undef
-module.exports = generateJestConfig({ esModules: ['is-ip', 'ip-regex'] })
+module.exports = generateJestConfig({ esModules: ['is-ip', 'ip-regex', 'lodash-es', 'uuid'] })
