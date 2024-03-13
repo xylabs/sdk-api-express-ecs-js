@@ -4017,6 +4017,7 @@ __metadata:
     eslint: ^8.49.0
     express: ^4.18.2
     express-mung: ^0.5.1
+    express-serve-static-core: ^0.1.1
     http-status-codes: ^2.2.0
     jest: ^29.6.4
     jest-extended: ^4.0.1
@@ -6896,6 +6897,13 @@ __metadata:
   version: 0.5.1
   resolution: "express-mung@npm:0.5.1"
   checksum: 76e8870617a4b4ee7d683c0f4fc8be3c5e38320b91f5f7911aee39958256bf546107a9c1baafa5763f11023eb99906712afd2237bcc750303923a7c5bceff18e
+  languageName: node
+  linkType: hard
+
+"express-serve-static-core@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "express-serve-static-core@npm:0.1.1"
+  checksum: 0f387ae5c12f51b9e843ade07bd412b4a0cbe23bbd5e95e047e45f4b3e1a6aa6bee53f765b039441f93110401221ec23a533844dce3e4f118e38cda5ed3dba0a
   languageName: node
   linkType: hard
 

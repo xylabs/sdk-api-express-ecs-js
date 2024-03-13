@@ -108,5 +108,8 @@
     "coverage": "jest --coverage"
   },
   "sideEffects": false,
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.3",
+  "dependencies": {
+    "express-serve-static-core": "^0.1.1"
+  }
 }
