@@ -3269,6 +3269,7 @@ __metadata:
     "@xylabs/eslint-config": 3.5.2
     "@xylabs/ts-scripts-yarn3": ^3.5.2
     "@xylabs/tsconfig": ^3.5.2
+    "@xylabs/tsconfig-jest": ^3.5.2
     body-parser: ^1.20.2
     connect: ^3.7.0
     eslint: ^8.57.0
@@ -3402,6 +3403,19 @@ __metadata:
     xy-ts: src/bin/xy-ts.ts
     yarn3only: dist/bin/yarn3only.js
   checksum: d64cd27ce10080ce33d3ffb8dfe540166ed68ee6410c6a2b5aba962a914cc008d7304a22b6bdf6f132bfa7df8d644a4b895235fa691bb6babef2ad60b77ff82b
+  languageName: node
+  linkType: hard
+
+"@xylabs/tsconfig-jest@npm:^3.5.2":
+  version: 3.5.2
+  resolution: "@xylabs/tsconfig-jest@npm:3.5.2"
+  dependencies:
+    "@xylabs/tsconfig": ~3.5.2
+    jest-extended: ^4.0.2
+    jest-sorted: ^1.0.15
+  peerDependencies:
+    typescript: ^5
+  checksum: eeb3e45449c85376cb7d28ff1057aeb81ea5897b07d565dfcfe6ebc4cea0ac945f3dc30855757e6d4054dc564586c3133c067105fdb3a15d9b1ce83c98d0dea2
   languageName: node
   linkType: hard
 
