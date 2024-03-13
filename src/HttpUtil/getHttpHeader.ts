@@ -10,7 +10,7 @@ import { Request } from 'express-serve-static-core'
  * @returns The first or only occurrence of the specified HTTP header
  */
 export const getHttpHeader = (header: string, req: Request): string | undefined => {
-  const headerValue: string | string[] = req.headers[header]
+  const headerValue = req.headers[header]
   const value =
     // If the header exists
     headerValue
