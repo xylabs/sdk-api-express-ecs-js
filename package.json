@@ -25,6 +25,7 @@
     "@xylabs/tsconfig": "^3.5.2",
     "@xylabs/tsconfig-jest": "^3.5.2",
     "body-parser": "^1.20.2",
+    "connect": "^3.7.0",
     "eslint": "^8.57.0",
     "express": "^4.18.3",
     "express-mung": "^0.5.1",
@@ -46,6 +47,7 @@
     "@aws-sdk/client-secrets-manager": "^3.256.0",
     "@xylabs/assert": "^2.6.16",
     "body-parser": "^1.20.1",
+    "connect": "^3.7.0",
     "express": "^4",
     "express-mung": "^0.5.1",
     "http-status-codes": "^2.2.0",
@@ -103,9 +105,6 @@
   },
   "sideEffects": false,
   "packageManager": "yarn@3.6.3",
-  "dependencies": {
-    "connect": "^3.7.0"
-  },
   "volta": {
     "node": "18.19.0",
     "yarn": "1.22.19"

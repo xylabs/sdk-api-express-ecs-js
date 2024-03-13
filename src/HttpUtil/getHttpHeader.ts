@@ -1,4 +1,4 @@
-import { Request } from 'express-serve-static-core'
+import type { Request } from 'express-serve-static-core'
 
 /**
  * Since there can be multiple of certain HTTP headers or

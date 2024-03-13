@@ -3292,6 +3292,7 @@ __metadata:
     "@aws-sdk/client-secrets-manager": ^3.256.0
     "@xylabs/assert": ^2.6.16
     body-parser: ^1.20.1
+    connect: ^3.7.0
     express: ^4
     express-mung: ^0.5.1
     http-status-codes: ^2.2.0
