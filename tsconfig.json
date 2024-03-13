@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "declarationDir": "./dist/types",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "incremental": false,
     "typeRoots": []
   },
-  "exclude": [".*", "**/dist", "node_modules", "storybook-static", "build"],
+  "exclude": ["./node_modules", "./**/node_modules", "./dist", "./**/dist", "./**/docs", ".*"],
   "extends": "@xylabs/tsconfig"
 }
