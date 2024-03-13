@@ -28,16 +28,15 @@ export const getJsonBodyParser = (options: OptionsJson = DefaultJsonBodyParserOp
   // Create closed instance of bodyParser to prevent instantiation of new instance on every request
   const parser = bodyParser.json(options)
 
-  // If we do not trap this error, then it dumps too much to log, usually happens if request aborted
-  const ret: NextHandleFunction = (req, res, next) => {
+  return (req, res, next) => {
+    // If we do not trap this error, then it dumps too much to log, usually happens if request aborted
     try {
       parser(req, res, next)
     } catch (ex) {
       const error = ex as Error
-      console.log(`bodyParser failed [${error.name}]: ${error.message}`)
+      console.log(`bodyParser failed [${error?.name}]: ${error?.message}`)
     }
   }
-  return ret
 }
 
 /**
