@@ -1,4 +1,4 @@
-import { logFormatStructured } from './logFormatStructured'
+import { logFormatStructured } from '../logFormatStructured'
 
 describe('logFormatStructured', () => {
   it('provides a logger format', () => {

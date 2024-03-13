@@ -1,4 +1,4 @@
-import { getDefaultRollbarTransport } from './getDefaultRollbarTransport'
+import { getDefaultRollbarTransport } from '../getDefaultRollbarTransport'
 
 describe('getDefaultRollbarTransport', () => {
   it('returns the transport', () => {

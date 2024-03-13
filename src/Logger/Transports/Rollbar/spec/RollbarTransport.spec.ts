@@ -1,7 +1,7 @@
 import { mock, MockProxy } from 'jest-mock-extended'
 import Rollbar from 'rollbar'
 
-import { RollbarTransport } from './RollbarTransport'
+import { RollbarTransport } from '../RollbarTransport'
 
 const accessToken = process.env.ROLLBAR_ACCESS_TOKEN
 const unitTestSentinelLoggingString = 'error log from unit test'

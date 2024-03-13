@@ -1,4 +1,4 @@
-import { logFormatLocalDev } from './logFormatLocalDev'
+import { logFormatLocalDev } from '../logFormatLocalDev'
 
 describe('logFormatLocalDev', () => {
   it('provides a logger format', () => {

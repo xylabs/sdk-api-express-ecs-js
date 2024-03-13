@@ -1,4 +1,4 @@
-import { getEnvFromAws } from './getEnvFromAws'
+import { getEnvFromAws } from '../getEnvFromAws'
 
 const nonExistentSecret = 'does-not-exist'
 const errorMessage = "Secrets Manager can't find the specified secret."

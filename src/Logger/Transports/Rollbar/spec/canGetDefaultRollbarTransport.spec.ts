@@ -1,4 +1,4 @@
-import { canGetDefaultRollbarTransport } from './canGetDefaultRollbarTransport'
+import { canGetDefaultRollbarTransport } from '../canGetDefaultRollbarTransport'
 
 describe('canGetDefaultRollbarTransport', () => {
   it('returns true if the transport could be created', () => {

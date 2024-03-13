@@ -1,5 +1,5 @@
-import { LoggerVerbosity } from './LoggerVerbosity'
-import { toWinstonVerbosity } from './toWinstonVerbosity'
+import { LoggerVerbosity } from '../LoggerVerbosity'
+import { toWinstonVerbosity } from '../toWinstonVerbosity'
 
 const loggerKeys: LoggerVerbosity[] = ['error', 'warn', 'info', 'debug', 'all']
 

@@ -1,4 +1,4 @@
-import { logFormatRollbar } from './logFormatRollbar'
+import { logFormatRollbar } from '../logFormatRollbar'
 
 describe('logFormatRollbar', () => {
   it('provides a logger format', () => {

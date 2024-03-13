@@ -1,4 +1,4 @@
-import { getDefaultLogger } from './getDefaultLogger'
+import { getDefaultLogger } from '../getDefaultLogger'
 
 describe('getDefaultLogger', () => {
   it('provides a default logger', () => {

@@ -5,7 +5,7 @@ global.console = mockDeep<Console>()
 
 import { Logger } from 'winston'
 
-import { getLogger } from './getLogger'
+import { getLogger } from '../getLogger'
 
 type LoggerKey = keyof Logger
 const loggerKeys: LoggerKey[] = ['error', 'warn', 'log', 'info', 'debug']
