@@ -13,6 +13,7 @@
   "devDependencies": {
     "@aws-sdk/client-secrets-manager": "^3.529.1",
     "@swc/core": "^1.4.7",
+    "@types/connect": "^3.4.38",
     "@types/express": "^4.17.21",
     "@types/express-mung": "^0.5.5",
     "@types/jest": "^29.5.12",
@@ -110,6 +111,7 @@
   "sideEffects": false,
   "packageManager": "yarn@3.6.3",
   "dependencies": {
+    "connect": "^3.7.0",
     "express-serve-static-core": "^0.1.1"
   }
 }
