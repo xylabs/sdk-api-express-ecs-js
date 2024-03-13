@@ -26,8 +26,8 @@ export const DefaultJsonBodyParserOptions: OptionsJson = {
  * @returns The combined JSON Body Parser options with the supplied values taking
  * precedence over the default
  */
-export const getJsonBodyParserOptions = (options: Partial<OptionsJson>): OptionsJson => {
-  return { ...DefaultJsonBodyParserOptions, ...options }
+export const getJsonBodyParserOptions = (options?: Partial<OptionsJson>): OptionsJson => {
+  return options ? { ...DefaultJsonBodyParserOptions, ...options } : DefaultJsonBodyParserOptions
 }
 
 /**
