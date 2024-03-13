@@ -20,6 +20,17 @@ export const DefaultJsonBodyParserOptions: OptionsJson = {
 }
 
 /**
+ * Gets the default JSON Body Parser options merged with the supplied options
+ * with the supplied options taking precedence
+ * @param options The options to override the default JSON Body Parser options with
+ * @returns The combined JSON Body Parser options with the supplied values taking
+ * precedence over the default
+ */
+export const getJsonBodyParserOptions = (options: Partial<OptionsJson>): OptionsJson => {
+  return { ...DefaultJsonBodyParserOptions, ...options }
+}
+
+/**
  * Get a JSON Body Parser connect middleware handler
  * @param options The options for the JSON Body Parser
  * @returns A middleware function that parses JSON bodies
