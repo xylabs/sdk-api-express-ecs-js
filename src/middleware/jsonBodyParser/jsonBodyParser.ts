@@ -1,20 +1,23 @@
 import bodyParser, { OptionsJson } from 'body-parser'
 import { NextHandleFunction } from 'connect'
-import { NextFunction, Request, Response } from 'express'
 
-const bodyParserInstance = bodyParser.json({ type: ['application/json', 'text/json'] })
+/**
+ * The default maximum request body size for the JSON Body Parser
+ */
+export const DefaultJsonBodyParserOptionsLimit = '100kb'
 
-// If we do not trap this error, then it dumps too much to log, usually happens if request aborted
-export const jsonBodyParser = (req: Request, res: Response, next: NextFunction) => {
-  try {
-    bodyParserInstance(req, res, next)
-  } catch (ex) {
-    const error = ex as Error
-    console.log(`bodyParser failed [${error.name}]: ${error.message}`)
-  }
+/**
+ * The default MIME types for the JSON Body Parser
+ */
+export const DefaultJsonBodyParserOptionsTypes = ['application/json', 'text/json']
+
+/**
+ * The default options for the JSON Body Parser
+ */
+export const DefaultJsonBodyParserOptions: OptionsJson = {
+  limit: DefaultJsonBodyParserOptionsLimit,
+  type: DefaultJsonBodyParserOptionsTypes,
 }
-
-export const DefaultJsonBodyParserOptions: OptionsJson = { type: ['application/json', 'text/json'] }
 
 /**
  * Get a JSON Body Parser connect middleware handler
@@ -36,3 +39,8 @@ export const getJsonBodyParser = (options: OptionsJson = DefaultJsonBodyParserOp
   }
   return ret
 }
+
+/**
+ * A JSON Body Parser middleware handler initialized with the default options
+ */
+export const jsonBodyParser = getJsonBodyParser()
