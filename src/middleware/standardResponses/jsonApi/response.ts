@@ -14,10 +14,6 @@ export interface ApiResourceObject extends ApiResourceIdentifierObject {
    */
   attributes?: Record<string, unknown>
   /**
-   * A relationships object describing relationships between the resource and other JSON:API resources.
-   */
-  relationships?: Record<string, Relationship>
-  /**
    * A links object containing links related to the resource.
    */
   links?: ApiLinks
@@ -25,17 +21,21 @@ export interface ApiResourceObject extends ApiResourceIdentifierObject {
    * A meta object containing non-standard meta-information about a resource that can not be represented as an attribute or relationship.
    */
   meta?: Record<string, unknown>
+  /**
+   * A relationships object describing relationships between the resource and other JSON:API resources.
+   */
+  relationships?: Record<string, Relationship>
 }
 
 export interface JsonApi {
-  version?: '1.0' | '1.1'
   meta?: Record<string, unknown>
+  version?: '1.0' | '1.1'
 }
 
 export interface ApiResponseBase {
-  meta?: Record<string, unknown>
   jsonapi?: JsonApi
   links?: ApiLinks
+  meta?: Record<string, unknown>
 }
 
 export interface ApiDataResponse<T extends ApiResourceIdentifierObject> extends ApiResponseBase {

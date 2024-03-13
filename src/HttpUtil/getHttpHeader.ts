@@ -13,14 +13,14 @@ export const getHttpHeader = (header: string, req: Request): string | undefined 
   const headerValue = req.headers[header]
   const value =
     // If the header exists
-    headerValue
-      ? // If there's multiple of the same header
-        Array.isArray(headerValue)
-        ? // Grab the first one
-          (headerValue as string[]).shift()
-        : // Otherwise grab the only one
-          (headerValue as string)
-      : // Otherwise undefined
-        undefined
+    headerValue ?
+      // If there's multiple of the same header
+      Array.isArray(headerValue) ?
+        // Grab the first one
+        (headerValue as string[]).shift()
+        // Otherwise grab the only one
+      : (headerValue as string)
+      // Otherwise undefined
+    : undefined
   return value
 }

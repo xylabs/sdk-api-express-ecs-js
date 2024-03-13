@@ -7,15 +7,15 @@ export const tryParse = <T = number>(func: ParseFunc<T>, value?: string) => {
       return result
     }
   } catch {
-    return undefined
+    return
   }
-  return undefined
+  return
 }
 
 export const tryParseFloat = (value?: string) => {
-  return tryParse(parseFloat, value)
+  return tryParse(Number.parseFloat, value)
 }
 
 export const tryParseInt = (value?: string) => {
-  return tryParse(parseInt, value)
+  return tryParse(Number.parseInt, value)
 }

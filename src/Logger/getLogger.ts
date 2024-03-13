@@ -20,7 +20,7 @@ if (canGetDefaultRollbarTransport(process.env)) {
   try {
     const rollbarTransport = getDefaultRollbarTransport(process.env)
     transports.push(rollbarTransport)
-  } catch (_err) {
+  } catch {
     // NOTE: No error here, just gracefully adding logger if ENV VARs
     // were preset
   }
