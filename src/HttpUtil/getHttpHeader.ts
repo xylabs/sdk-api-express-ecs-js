@@ -1,4 +1,4 @@
-import { Request } from 'express'
+import { Request } from 'express-serve-static-core'
 
 /**
  * Since there can be multiple of certain HTTP headers or
@@ -10,15 +10,16 @@ import { Request } from 'express'
  * @returns The first or only occurrence of the specified HTTP header
  */
 export const getHttpHeader = (header: string, req: Request): string | undefined => {
+  const headerValue: string | string[] = req.headers[header]
   const value =
     // If the header exists
-    req.headers[header]
+    headerValue
       ? // If there's multiple of the same header
-        Array.isArray(req.headers[header])
+        Array.isArray(headerValue)
         ? // Grab the first one
-          (req.headers[header] as string[]).shift()
+          (headerValue as string[]).shift()
         : // Otherwise grab the only one
-          (req.headers[header] as string)
+          (headerValue as string)
       : // Otherwise undefined
         undefined
   return value
