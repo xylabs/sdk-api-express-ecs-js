@@ -11,15 +11,15 @@
   },
   "description": "SDK for base code for Api repos that use express and deploy on AWS ECS",
   "devDependencies": {
-    "@aws-sdk/client-secrets-manager": "^3.529.1",
-    "@swc/core": "^1.4.7",
+    "@aws-sdk/client-secrets-manager": "^3.535.0",
+    "@swc/core": "^1.4.8",
     "@types/connect": "^3.4.38",
     "@types/express": "^4.17.21",
     "@types/express-mung": "^0.5.5",
     "@types/express-serve-static-core": "^4.17.43",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.11.26",
-    "@xylabs/assert": "^3.0.13",
+    "@types/node": "^20.11.30",
+    "@xylabs/assert": "^3.0.14",
     "@xylabs/eslint-config": "3.5.2",
     "@xylabs/ts-scripts-yarn3": "^3.5.2",
     "@xylabs/tsconfig": "^3.5.2",
@@ -44,8 +44,6 @@
     "winston-transport": "^4.7.0"
   },
   "peerDependencies": {
-    "@aws-sdk/client-secrets-manager": "^3.256.0",
-    "@xylabs/assert": "^2.6.16",
     "body-parser": "^1.20.1",
     "connect": "^3.7.0",
     "express": "^4",
