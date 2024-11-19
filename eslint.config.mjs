@@ -20,6 +20,7 @@ export default [
       'public',
       '.storybook',
       'storybook-static',
+      'eslint.config.mjs',
       '**/docs/**/*.js',
     ],
   },
