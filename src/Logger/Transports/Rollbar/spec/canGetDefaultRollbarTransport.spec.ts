@@ -1,4 +1,10 @@
-import { canGetDefaultRollbarTransport } from '../canGetDefaultRollbarTransport'
+import '@xylabs/vitest-extended'
+
+import {
+  describe, expect, it,
+} from 'vitest'
+
+import { canGetDefaultRollbarTransport } from '../canGetDefaultRollbarTransport.ts'
 
 describe('canGetDefaultRollbarTransport', () => {
   it('returns true if the transport could be created', () => {

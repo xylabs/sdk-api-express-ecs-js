@@ -1,2 +1,2 @@
-export * from './counters'
-export * from './responseProfiler'
+export * from './counters.ts'
+export * from './responseProfiler.ts'

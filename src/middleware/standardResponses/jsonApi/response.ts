@@ -3,10 +3,10 @@
  * https://jsonapi.org/format/
  */
 
-import { ApiError } from './error'
-import { ApiLinks } from './links'
-import { Relationship } from './relationship'
-import { ApiResourceIdentifierObject } from './resourceIdentifier'
+import type { ApiError } from './error.ts'
+import type { ApiLinks } from './links.ts'
+import type { Relationship } from './relationship.ts'
+import type { ApiResourceIdentifierObject } from './resourceIdentifier.ts'
 
 export interface ApiResourceObject extends ApiResourceIdentifierObject {
   /**

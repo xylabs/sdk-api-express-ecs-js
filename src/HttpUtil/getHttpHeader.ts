@@ -11,16 +11,16 @@ import type { Request } from 'express-serve-static-core'
  */
 export const getHttpHeader = (header: string, req: Request): string | undefined => {
   const headerValue = req.headers[header]
-  const value =
+  const value
     // If the header exists
-    headerValue ?
+    = headerValue
       // If there's multiple of the same header
-      Array.isArray(headerValue) ?
+      ? Array.isArray(headerValue)
         // Grab the first one
-        (headerValue as string[]).shift()
+        ? (headerValue as string[]).shift()
         // Otherwise grab the only one
-      : (headerValue as string)
+        : (headerValue as string)
       // Otherwise undefined
-    : undefined
+      : undefined
   return value
 }

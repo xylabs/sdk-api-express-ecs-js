@@ -1,1 +1,1 @@
-export * from './jsonBodyParser'
+export * from './jsonBodyParser.ts'

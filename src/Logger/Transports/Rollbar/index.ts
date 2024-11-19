@@ -1,3 +1,3 @@
-export * from './canGetDefaultRollbarTransport'
-export * from './getDefaultRollbarTransport'
-export * from './RollbarTransport'
+export * from './canGetDefaultRollbarTransport.ts'
+export * from './getDefaultRollbarTransport.ts'
+export * from './RollbarTransport.ts'

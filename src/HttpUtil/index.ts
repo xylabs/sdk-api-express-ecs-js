@@ -1,1 +1,1 @@
-export * from './getHttpHeader'
+export * from './getHttpHeader.ts'

@@ -1,1 +1,1 @@
-export * from './logFormatLocalDev'
+export * from './logFormatLocalDev.ts'

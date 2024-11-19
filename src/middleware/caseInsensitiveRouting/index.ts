@@ -1,1 +1,1 @@
-export * from './caseInsensitiveRouting'
+export * from './caseInsensitiveRouting.ts'

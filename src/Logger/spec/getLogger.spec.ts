@@ -1,11 +1,14 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { mockDeep } from 'jest-mock-extended'
-global.console = mockDeep<Console>()
+import { mockDeep } from 'vitest-mock-extended'
+globalThis.console = mockDeep<Console>()
+import '@xylabs/vitest-extended'
 
-import { Logger } from 'winston'
+import {
+  describe, expect, it,
+} from 'vitest'
+import type { Logger } from 'winston'
 
-import { getLogger } from '../getLogger'
+import { getLogger } from '../getLogger.ts'
 
 type LoggerKey = keyof Logger
 const loggerKeys: LoggerKey[] = ['error', 'warn', 'log', 'info', 'debug']

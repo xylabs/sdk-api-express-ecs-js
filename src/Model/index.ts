@@ -1,1 +1,1 @@
-export * from './ExpressError'
+export * from './ExpressError.ts'

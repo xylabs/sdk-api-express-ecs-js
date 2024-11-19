@@ -1,4 +1,6 @@
-import { NextFunction, Request, Response } from 'express'
+import type {
+  NextFunction, Request, Response,
+} from 'express'
 
 /**
  * Connect middleware to enable profiling of response lifecycle timing. To effectively profile
@@ -16,8 +18,6 @@ export const responseProfiler = (_req: Request, res: Response, next: NextFunctio
   if (!res.locals?.meta) {
     res.locals.meta = {}
   }
-  res.locals.meta.profile = {
-    startTime: Date.now(),
-  }
+  res.locals.meta.profile = { startTime: Date.now() }
   next()
 }

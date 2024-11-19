@@ -1,2 +1,2 @@
-export * from './compactObject'
-export * from './tryParse'
+export * from './compactObject.ts'
+export * from './tryParse.ts'

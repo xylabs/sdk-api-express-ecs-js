@@ -1,1 +1,1 @@
-export * from './getEnvFromAws'
+export * from './getEnvFromAws.ts'

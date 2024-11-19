@@ -1,1 +1,1 @@
-export * from './logFormatRollbar'
+export * from './logFormatRollbar.ts'

@@ -1,6 +1,6 @@
-import { Logger as Winston } from 'winston'
+import type { Logger as Winston } from 'winston'
 
-import { LogFunction, Logger } from './Logger'
+import type { LogFunction, Logger } from './Logger'
 
 /**
  * Wrap Winston logger methods to adapt to familiar
@@ -8,9 +8,9 @@ import { LogFunction, Logger } from './Logger'
  */
 export class WrappedWinstonLogger implements Logger {
   constructor(protected readonly winston: Winston) {}
-  debug: LogFunction = (message) => this.winston.debug(message)
-  error: LogFunction = (message) => this.winston.error(message)
-  info: LogFunction = (message) => this.winston.info(message)
-  log: LogFunction = (message) => this.winston.info(message)
-  warn: LogFunction = (message) => this.winston.warn(message)
+  debug: LogFunction = message => this.winston.debug(message)
+  error: LogFunction = message => this.winston.error(message)
+  info: LogFunction = message => this.winston.info(message)
+  log: LogFunction = message => this.winston.info(message)
+  warn: LogFunction = message => this.winston.warn(message)
 }

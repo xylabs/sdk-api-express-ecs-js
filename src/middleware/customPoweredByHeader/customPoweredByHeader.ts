@@ -1,4 +1,6 @@
-import { Express, NextFunction, Request, Response } from 'express'
+import type {
+  Express, NextFunction, Request, Response,
+} from 'express'
 
 const header = 'X-Powered-By'
 const setting = 'x-powered-by'

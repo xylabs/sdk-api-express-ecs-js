@@ -1,8 +1,10 @@
-import { ApiResourceIdentifierObject } from './resourceIdentifier'
+import type { ApiResourceIdentifierObject } from './resourceIdentifier.ts'
 
 export interface IRelationshipSelfLink {
   /**
-   * A link for the relationship itself (a "relationship link"). This link allows the client to directly manipulate the relationship. For example, removing an author through an article’s relationship URL would disconnect the person from the article without deleting the people resource itself. When fetched successfully, this link returns the linkage for the related resources as its primary data.
+   * A link for the relationship itself (a "relationship link"). This link allows the client to directly manipulate the relationship.
+   * For example, removing an author through an article’s relationship URL would disconnect the person from the article without
+   * deleting the people resource itself. When fetched successfully, this link returns the linkage for the related resources as its primary data.
    */
   self: string
 }
@@ -34,7 +36,8 @@ export interface IRelationshipData {
 export type RelationshipMeta = Record<string, unknown>
 
 /**
- * The value of the relationships key MUST be an object (a "relationships object"). Members of the relationships object ("relationships") represent references from the resource object in which it’s defined to other resource objects.
+ * The value of the relationships key MUST be an object (a "relationships object"). Members of the relationships object ("relationships")
+ * represent references from the resource object in which it’s defined to other resource objects.
  * Relationships may be to-one or to-many.
  */
 export type Relationship = IRelationshipLinks | IRelationshipData | RelationshipMeta

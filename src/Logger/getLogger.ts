@@ -1,13 +1,13 @@
 import { createLogger, transports as winstonTransports } from 'winston'
-import TransportStream from 'winston-transport'
+import type TransportStream from 'winston-transport'
 
-import { logFormatLocalDev, logFormatStructured } from './LogFormats'
-import { Logger } from './Logger'
-import { LoggerVerbosity } from './LoggerVerbosity'
-import { toWinstonVerbosity } from './toWinstonVerbosity'
-import { canGetDefaultRollbarTransport, getDefaultRollbarTransport } from './Transports'
-import { WinstonVerbosity } from './WinstonVerbosity'
-import { WrappedWinstonLogger } from './WrappedWinstonLogger'
+import { logFormatLocalDev, logFormatStructured } from './LogFormats/index.ts'
+import type { Logger } from './Logger.ts'
+import type { LoggerVerbosity } from './LoggerVerbosity.ts'
+import { toWinstonVerbosity } from './toWinstonVerbosity.ts'
+import { canGetDefaultRollbarTransport, getDefaultRollbarTransport } from './Transports/index.ts'
+import type { WinstonVerbosity } from './WinstonVerbosity.ts'
+import { WrappedWinstonLogger } from './WrappedWinstonLogger.ts'
 
 const exitOnError = false
 const handleRejections = true

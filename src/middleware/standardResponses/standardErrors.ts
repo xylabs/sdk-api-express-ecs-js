@@ -1,8 +1,9 @@
-import { NextFunction, Request, Response } from 'express'
+import type {
+  NextFunction, Request, Response,
+} from 'express'
 
-import { ExpressError } from '../../Model'
-import { getResponseMetadata } from './getResponseMetadata'
-import { ApiError, ApiErrorResponse } from './jsonApi'
+import type { ExpressError } from '../../Model/index.ts'
+import type { ApiError } from './jsonApi/index.ts'
 
 export const standardErrors = (err: ExpressError, req: Request, res: Response, next: NextFunction) => {
   if (!err) {
@@ -17,13 +18,8 @@ export const standardErrors = (err: ExpressError, req: Request, res: Response, n
     status: `${err.statusCode}`,
     title: err.name,
   }
-  const body: ApiErrorResponse = { errors: [error] }
-  const meta = getResponseMetadata(res)
-  if (meta) {
-    body.meta = meta
-  }
 
-  res.status(err.statusCode).json(body)
+  res.status(err.statusCode).json(error)
 
   next(err)
 }

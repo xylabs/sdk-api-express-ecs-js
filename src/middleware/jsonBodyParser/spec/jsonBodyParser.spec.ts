@@ -1,4 +1,10 @@
-import { DefaultJsonBodyParserOptions, getJsonBodyParserOptions } from '../jsonBodyParser'
+import '@xylabs/vitest-extended'
+
+import {
+  describe, expect, it,
+} from 'vitest'
+
+import { DefaultJsonBodyParserOptions, getJsonBodyParserOptions } from '../jsonBodyParser.ts'
 
 describe('jsonBodyParser', () => {
   describe('getJsonBodyParserOptions', () => {

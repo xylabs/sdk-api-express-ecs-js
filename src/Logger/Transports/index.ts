@@ -1,1 +1,1 @@
-export * from './Rollbar'
+export * from './Rollbar/index.ts'

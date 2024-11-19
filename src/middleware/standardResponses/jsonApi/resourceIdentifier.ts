@@ -1,5 +1,6 @@
 /**
- * Within a given API, each resource object's type and id pair MUST identify a single, unique resource. (The set of URIs controlled by a server, or multiple servers acting as one, constitute an API.)
+ * Within a given API, each resource object's type and id pair MUST identify a single, unique resource.
+ * (The set of URIs controlled by a server, or multiple servers acting as one, constitute an API.)
  */
 export interface ApiResourceIdentifierObject {
   /**
@@ -7,7 +8,8 @@ export interface ApiResourceIdentifierObject {
    */
   id: string
   /**
-   * The type member is used to describe resource objects that share common attributes and relationships. The values of type members MUST adhere to the same constraints as member names.
+   * The type member is used to describe resource objects that share common attributes and relationships.
+   * The values of type members MUST adhere to the same constraints as member names.
    */
   type: string
 }

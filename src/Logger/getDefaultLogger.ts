@@ -1,6 +1,6 @@
-import { getLogger } from './getLogger'
-import { Logger } from './Logger'
-import { WrappedWinstonLogger } from './WrappedWinstonLogger'
+import { getLogger } from './getLogger.ts'
+import type { Logger } from './Logger.ts'
+import type { WrappedWinstonLogger } from './WrappedWinstonLogger.ts'
 
 /**
  * Static instance to prevent multiple instances of the same logger

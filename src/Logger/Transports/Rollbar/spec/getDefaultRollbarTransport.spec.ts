@@ -1,4 +1,10 @@
-import { getDefaultRollbarTransport } from '../getDefaultRollbarTransport'
+import '@xylabs/vitest-extended'
+
+import {
+  describe, expect, it,
+} from 'vitest'
+
+import { getDefaultRollbarTransport } from '../getDefaultRollbarTransport.ts'
 
 describe('getDefaultRollbarTransport', () => {
   it('returns the transport', () => {

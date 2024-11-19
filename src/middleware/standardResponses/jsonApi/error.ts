@@ -1,4 +1,4 @@
-import { ApiLinks } from './links'
+import type { ApiLinks } from './links.ts'
 
 /**
  * An object containing references to the source of the error
@@ -9,7 +9,8 @@ export interface Source {
    */
   parameter?: string
   /**
-   * A JSON Pointer [RFC6901] to the associated entity in the request document [e.g. "/data" for a primary data object, or "/data/attributes/title" for a specific attribute].
+   * A JSON Pointer [RFC6901] to the associated entity in the request document [e.g. "/data" for a primary data object,
+   * or "/data/attributes/title" for a specific attribute].
    */
   pointer?: string
 }

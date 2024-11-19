@@ -1,1 +1,1 @@
-export * from './customPoweredByHeader'
+export * from './customPoweredByHeader.ts'

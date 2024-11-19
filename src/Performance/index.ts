@@ -1,2 +1,2 @@
-export * from './Counters'
-export * from './Profiler'
+export * from './Counters.ts'
+export * from './Profiler.ts'

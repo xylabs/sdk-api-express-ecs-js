@@ -1,4 +1,6 @@
-import { NextFunction, Request, RequestHandler, Response } from 'express'
+import type {
+  NextFunction, Request, RequestHandler, Response,
+} from 'express'
 import type { ParamsDictionary, Query } from 'express-serve-static-core'
 
 export function asyncHandler<P = NoReqParams, ResBody = NoResBody, ReqBody = NoReqBody, ReqQuery = NoReqQuery, Locals extends NoLocals = NoLocals>(
@@ -9,7 +11,6 @@ export function asyncHandler<P = NoReqParams, ResBody = NoResBody, ReqBody = NoR
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface Empty {}
 
 export type NoReqParams = ParamsDictionary

@@ -1,1 +1,1 @@
-export * from './logFormatStructured'
+export * from './logFormatStructured.ts'

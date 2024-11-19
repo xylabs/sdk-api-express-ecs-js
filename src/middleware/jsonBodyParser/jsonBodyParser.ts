@@ -1,5 +1,6 @@
-import bodyParser, { OptionsJson } from 'body-parser'
-import { NextHandleFunction } from 'connect'
+import type { OptionsJson } from 'body-parser'
+import bodyParser from 'body-parser'
+import type { NextHandleFunction } from 'connect'
 
 /**
  * The default maximum request body size for the JSON Body Parser

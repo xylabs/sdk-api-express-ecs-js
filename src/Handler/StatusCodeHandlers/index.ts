@@ -1,1 +1,1 @@
-export * from './notImplemented'
+export * from './notImplemented.ts'

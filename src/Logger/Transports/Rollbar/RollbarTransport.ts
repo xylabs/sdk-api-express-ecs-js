@@ -1,5 +1,6 @@
-import Rollbar from 'rollbar'
-import Transport, { TransportStreamOptions } from 'winston-transport'
+import type Rollbar from 'rollbar'
+import type { TransportStreamOptions } from 'winston-transport'
+import Transport from 'winston-transport'
 
 import { logFormatRollbar } from '../../LogFormats'
 
@@ -8,10 +9,11 @@ export class RollbarTransport extends Transport {
     opts: TransportStreamOptions,
     protected readonly rollbar?: Rollbar,
   ) {
-    super({ ...opts, format: logFormatRollbar, level: 'error' })
+    super({
+      ...opts, format: logFormatRollbar, level: 'error',
+    })
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   override log(info: { message?: string }, next: () => void) {
     this.rollbar?.error(info?.message)
     this.emit('logged', info?.message)
