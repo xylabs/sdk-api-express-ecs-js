@@ -3583,16 +3583,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-mung@npm:^0.5.5":
-  version: 0.5.5
-  resolution: "@types/express-mung@npm:0.5.5"
-  dependencies:
-    "@types/express": "npm:*"
-    "@types/node": "npm:*"
-  checksum: 10/54b0e2c642f6f4c37dbace2069b36cc3fc35441c9c13d94286f5989d344ab511822656f3b698b9533b4639ae7cde7e7384851eb85f4b1e2177df1643897adddf
-  languageName: node
-  linkType: hard
-
 "@types/express-serve-static-core@npm:^4.17.33, @types/express-serve-static-core@npm:^4.19.6":
   version: 4.19.6
   resolution: "@types/express-serve-static-core@npm:4.19.6"
@@ -3605,7 +3595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:^4.17.21":
+"@types/express@npm:^4.17.21":
   version: 4.17.21
   resolution: "@types/express@npm:4.17.21"
   dependencies:
@@ -4230,7 +4220,6 @@ __metadata:
     "@swc/core": "npm:^1.9.2"
     "@types/connect": "npm:^3.4.38"
     "@types/express": "npm:^4.17.21"
-    "@types/express-mung": "npm:^0.5.5"
     "@types/express-serve-static-core": "npm:^4.19.6"
     "@types/node": "npm:^22.9.0"
     "@typescript-eslint/parser": "npm:^8.15.0"
@@ -4245,7 +4234,7 @@ __metadata:
     eslint: "npm:^9.15.0"
     eslint-import-resolver-typescript: "npm:^3.6.3"
     express: "npm:^4.21.1"
-    express-mung: "npm:^0.5.1"
+    express-response-middleware: "npm:^2.1.0"
     http-status-codes: "npm:^2.3.0"
     node-cache: "npm:^5.1.2"
     publint: "npm:^0.2.12"
@@ -6845,10 +6834,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-mung@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "express-mung@npm:0.5.1"
-  checksum: 10/f789aff37802f49ced33764ef888d2aaf00d52930d5cdbdfea75e3751e4284926e9f351ee506254c930abc9e6761746a621fbfc4b1779da040e6f5977654517c
+"express-response-middleware@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "express-response-middleware@npm:2.1.0"
+  peerDependencies:
+    express: ^4.0.0 || ^5.0.0
+  checksum: 10/dbdaab9b08dc11cfd9e28bbc5546afd65c4bc140abd2b3770ac2d7ab5ee9a9420b0eb2ce501944363e03371f8940457a1483a56d13cb7f5d227f401e0f814850
   languageName: node
   linkType: hard
 

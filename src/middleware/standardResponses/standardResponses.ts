@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express'
-import mung from 'express-mung'
+import { jsonMiddleware, TransformJson } from 'express-response-middleware'
 
 import { getResponseMetadata } from './getResponseMetadata.ts'
 
@@ -10,7 +10,8 @@ import { getResponseMetadata } from './getResponseMetadata.ts'
  * @param res The response
  * @returns The transformed response body
  */
-export const transformResponse = (body: unknown, _req: Request, res: Response) => {
+export const transformResponse: TransformJson = (body, _req, res) => {
+  if (res.statusCode >= 400) return
   const meta = getResponseMetadata(res)
   return { data: body, meta }
 }
@@ -20,4 +21,4 @@ export const transformResponse = (body: unknown, _req: Request, res: Response) =
  * the standard response format (compatible with JSON API)
  */
 
-export const standardResponses = mung.json(transformResponse, { mungError: false })
+export const standardResponses = jsonMiddleware(transformResponse)
