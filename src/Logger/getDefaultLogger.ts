@@ -6,8 +6,9 @@ import type { WrappedWinstonLogger } from './WrappedWinstonLogger.ts'
  * Static instance to prevent multiple instances of the same logger
  * with the same config
  */
-let defaultLogger: WrappedWinstonLogger
+let defaultLogger: Logger | undefined
 export const getDefaultLogger = (): Logger => {
   if (defaultLogger) return defaultLogger
-  return getLogger()
+  defaultLogger = getLogger()
+  return defaultLogger
 }
