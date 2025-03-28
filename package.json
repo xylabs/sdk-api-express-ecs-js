@@ -1,7 +1,7 @@
 {
   "name": "@xylabs/sdk-api-express-ecs",
   "version": "2.1.0",
-  "description": "SDK for base code for Api repos that use express and deploy on AWS ECS",
+  "description": "SDK for base code for API repos that use Express",
   "keywords": [
     "xylabs",
     "typescript",
@@ -13,12 +13,12 @@
   ],
   "homepage": "https://xylabs.com",
   "bugs": {
-    "url": "https://github.com/xylabs/sdk-api-express-ecs-js/issues",
+    "url": "git+https://github.com/xylabs/sdk-api-express-ecs-js/issues",
     "email": "support@xylabs.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xylabs/sdk-api-express-ecs-js.git"
+    "url": "git+https://github.com/xylabs/sdk-api-express-ecs-js.git"
   },
   "license": "LGPL-3.0",
   "author": {
