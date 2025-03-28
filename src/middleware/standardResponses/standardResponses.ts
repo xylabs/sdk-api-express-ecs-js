@@ -49,8 +49,8 @@ const transformResponse = (body: unknown, _req: Request, res: Response<unknown, 
   return isRawResponseFormatSet(res)
     ? body
     : (res.statusCode >= 200 && res.statusCode < 300)
-      ? { data: body, meta: getResponseMetadata(res) }
-      : { error: body, meta: getResponseMetadata(res) }
+        ? { data: body, meta: getResponseMetadata(res) }
+        : { error: body, meta: getResponseMetadata(res) }
 }
 
 /**
